@@ -69,9 +69,11 @@ class Monitor:
                                    self.config['ElasticSearch']['elastic_password'])
 
         self.check_index()
-        print(self.index)
+        print("index: " + self.index)
+        print("Document indexing started!")
         for commit in self.commits:
             if commit.commit is not None:
                 self.index_doc(commit.commit.author.date,
                                commit.commit.author.name,
                                commit.commit.message)
+        print("Document indexing finished successfully!")
