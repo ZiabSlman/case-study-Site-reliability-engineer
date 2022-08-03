@@ -1,0 +1,135 @@
+GET /rockstarlang-rockstar-main-commits/_search:
+
+200 — OK (653 ms)
+
+{
+  "hits": {
+    "hits": [
+      {
+        "_score": 1,
+        "_id": "-YZUZYIB50uzH0fe55tJ",
+        "_source": {
+          "date": "2021-08-22T14:49:59",
+          "commit_message": "Document that 'in' is an alias for 'into'",
+          "author_name": "Mike Seplowitz"
+        },
+        "_index": "rockstarlang-rockstar-main-commits"
+      },
+      {
+        "_score": 1,
+        "_id": "-oZUZYIB50uzH0fe55vW",
+        "_source": {
+          "date": "2021-08-22T13:48:11",
+          "commit_message": "Combine duplicate pop/roll rules",
+          "author_name": "Mike Seplowitz"
+        },
+        "_index": "rockstarlang-rockstar-main-commits"
+      },
+      {
+        "_score": 1,
+        "_source": {
+          "date": "2021-08-21T17:25:03",
+          "commit_message": "Reorganize keyword list\n\n* Removed 'it ' from keyword list ('it' was already there).\n\n* Added these keywords already existing in the grammar:\n  'are', 'be', 'cut', \"isn't\", 'let', 'like', 'pop', 'push', 'rock',\n  'roll', 'send' 'shatter', 'silence', 'silent', 'split', 'turn'\n\n* Added reserved keywords 'maybe' and 'definitely'.",
+          "author_name": "Mike Seplowitz"
+        },
+        "_id": "-4ZUZYIB50uzH0fe6Jtk",
+        "_ignored": [
+          "commit_message.keyword"
+        ],
+        "_index": "rockstarlang-rockstar-main-commits"
+      },
+      {
+        "_score": 1,
+        "_id": "_IZUZYIB50uzH0fe6Jv1",
+        "_source": {
+          "date": "2021-08-21T17:24:55",
+          "commit_message": "Expand tests involving keywords\n\n* Keywords cannot be part of proper variable names.\n\n* 'maybe' and 'definitely maybe' are reserved for future use.",
+          "author_name": "Mike Seplowitz"
+        },
+        "_index": "rockstarlang-rockstar-main-commits"
+      },
+      {
+        "_score": 1,
+        "_id": "_YZUZYIB50uzH0fe6ZuA",
+        "_source": {
+          "date": "2021-08-20T14:50:11",
+          "commit_message": "Merge pull request #279 from mikesep/case-insensitivity\n\nFix case insensitivity for simple variables",
+          "author_name": "Dylan Beattie"
+        },
+        "_index": "rockstarlang-rockstar-main-commits"
+      },
+      {
+        "_score": 1,
+        "_id": "_oZUZYIB50uzH0fe6psM",
+        "_source": {
+          "date": "2021-08-19T01:42:46",
+          "commit_message": "Regenerate parser",
+          "author_name": "Mike Seplowitz"
+        },
+        "_index": "rockstarlang-rockstar-main-commits"
+      },
+      {
+        "_score": 1,
+        "_id": "_4ZUZYIB50uzH0fe6puW",
+        "_source": {
+          "date": "2021-08-19T01:41:37",
+          "commit_message": "Convert simple variable names to lowercase\n\nThis makes them case-insensitive, similar to common variables.",
+          "author_name": "Mike Seplowitz"
+        },
+        "_index": "rockstarlang-rockstar-main-commits"
+      },
+      {
+        "_score": 1,
+        "_source": {
+          "date": "2021-10-23T18:52:47",
+          "commit_message": "Use element equality to check if arrays are equal\n\nThe implementation already supported the notion that arrays are equal if\nthey contain the same values. Using eq() instead of === uses Rockstar's\nequality tests rather than JavaScript's identity-based equality.",
+          "author_name": "Mike Seplowitz"
+        },
+        "_id": "5YZUZYIB50uzH0fe15u6",
+        "_ignored": [
+          "commit_message.keyword"
+        ],
+        "_index": "rockstarlang-rockstar-main-commits"
+      },
+      {
+        "_score": 1,
+        "_source": {
+          "date": "2021-10-11T23:47:08",
+          "commit_message": "Explicitly convert array to scalar\n\nWhen an array is used in a scalar context, use its length at that time\nrather than trying to force env.lookup to return its length instead of\nits contents.\n\nThis avoids a bug where calling a function caused the next array usage\nto return the array contents rather than its length. It also allows\ncode to use arrays returned by functions.",
+          "author_name": "Mike Seplowitz"
+        },
+        "_id": "5oZUZYIB50uzH0fe2Zug",
+        "_ignored": [
+          "commit_message.keyword"
+        ],
+        "_index": "rockstarlang-rockstar-main-commits"
+      },
+      {
+        "_score": 1,
+        "_source": {
+          "date": "2021-10-23T18:35:08",
+          "commit_message": "Make 'rock' & 'roll' queue operations\n\nThe spec described rock/push as pushing onto the front of the array, but\nmost implementations push onto the back, resulting in rock & roll being\nqueue operations, not stack operations.\n\n* Updated spec to describe queue operations.\n* Added tests to specify the ordering of rocking and rolling.\n\nCloses #287.",
+          "author_name": "Mike Seplowitz"
+        },
+        "_id": "54ZUZYIB50uzH0fe2psq",
+        "_ignored": [
+          "commit_message.keyword"
+        ],
+        "_index": "rockstarlang-rockstar-main-commits"
+      }
+    ],
+    "total": {
+      "relation": "eq",
+      "value": 373
+    },
+    "max_score": 1
+  },
+  "_shards": {
+    "successful": 1,
+    "failed": 0,
+    "skipped": 0,
+    "total": 1
+  },
+  "took": 5,
+  "timed_out": false
+}
