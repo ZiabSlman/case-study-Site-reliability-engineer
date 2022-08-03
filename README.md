@@ -30,3 +30,7 @@ In config.ini file, set the desired configuration.
   Execute the command.
   
 	python main.py 
+
+# Test: 
+  
+An account was created on Elastic cloud and the commits are available as separate documents in Elastic, the search result is available in test_result.txt
